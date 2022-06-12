@@ -12,19 +12,19 @@ function EventItem(props){
     const formattedAdress = location.replace(', ','\n')
     return <li className={classes.item}>
         <img src={'/'+ image } alt={title}/>
-        <div>
-            <div>
+        <div className={classes.contents}>
+            <div className={classes.summary}>
                   <h1>{title}</h1>
-                  <div>
+                  <div className={classes.date}>
                       <time>{humanReadable}</time>
                  </div>
             </div>
-            <div>
-                <addres>
+            <div className={classes.address}>
+                <address>
                     {formattedAdress}
-                </addres>
+                </address>
             </div>
-            <div>
+            <div className={classes.actions}>
             <Link href={exploreLink}> Explore Event</Link>
             </div>
         </div>
